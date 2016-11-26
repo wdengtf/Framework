@@ -9,7 +9,7 @@ using log4net;
 using System.Reflection;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.xml", Watch = true)] 
-namespace Framework.log
+namespace Framework.Log
 {
     /// <summary>
     /// log4net操作日志类

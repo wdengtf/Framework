@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using Framework.log;
+using Framework.Log;
 
 namespace Framework.Cookies
 {
@@ -113,7 +113,7 @@ namespace Framework.Cookies
             }
             catch (Exception ex)
             {
-                log.LogService.logDebug(ex);
+                Log.LogService.logDebug(ex);
             }
             return flag;
         }
@@ -142,7 +142,7 @@ namespace Framework.Cookies
             }
             catch (Exception ex)
             {
-                log.LogService.logDebug(ex);
+                Log.LogService.logDebug(ex);
             }
             return flag;
         }
@@ -192,7 +192,7 @@ namespace Framework.Cookies
             }
             catch (Exception ex)
             {
-                log.LogService.logDebug(ex);
+                Log.LogService.logDebug(ex);
             }
             return strCookValue;
         }

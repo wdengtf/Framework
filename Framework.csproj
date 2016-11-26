@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Cookies\CookieHandle.cs" />
     <Compile Include="Cookies\CookUtils.cs" />
-    <Compile Include="log\LogService.cs" />
+    <Compile Include="Log\LogService.cs" />
     <Compile Include="Model\JsonResult.cs" />
     <Compile Include="Model\MsgShowConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
