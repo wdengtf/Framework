@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+  </configSections>
+  <log4net>
+    <!--定义输出到文件中-->
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <!--定义文件存放位置-->
+      <file value="Log\\"/>
+      <appendToFile value="true"/>
+      <rollingStyle value="Date"/>
+      <datePattern value="yyyy-MM\\yyyyMMdd.txt'"/>
+      <staticLogFileName value="false"/>
+      <param name="MaxSizeRollBackups" value="100"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <!--每条日志末尾的文字说明-->
+        <!--输出格式
+          %m、%message         输出的日志消息
+          %d、%datetime        输出当前语句运行的时刻，格式%date{yyyy-MM-dd HH:mm:ss,fff}
+          %r、%timestamp       输出程序从运行到执行到当前语句时消耗的毫秒数
+          %p、%level           日志的当前优先级别
+          %c、%logger          当前日志对象的名称
+          %L、%line            输出语句所在的行号
+          %F、%file            输出语句所在的文件名，警告：只在调试的时候有效，调用本地信息会影响性能
+          %a、%appdomain       引发日志事件的应用程序域的名称。
+          %C、%class、%type    引发日志请求的类的全名，警告：会影响性能
+          %exception           异常信息
+          %u、%identity        当前活动用户的名字，我测试的时候%identity返回都是空的。警告：会影响性能
+          %l、%location        引发日志事件的名空间、类名、方法、行号。警告：会影响性能，依赖pdb文件
+          %M、%method          发生日志请求的方法名，警告：会影响性能
+          %n、%newline         换行符
+          %x、%ndc             NDC(nested diagnostic context)
+          %X、%mdc、%P、%properties  等介于 %property
+          %property           输出{log4net:Identity=, log4net:UserName=, log4net:HostName=} 
+          %t、%thread         引发日志事件的线程，如果没有线程名就使用线程号。
+          %w、%username       当前用户的WindowsIdentity,类似：HostName/Username。警告：会影响性能
+          %utcdate            发生日志事件的UTC时间。例如：%utcdate{HH:mm:ss,fff}
+          %%                  输出一个百分号
+        -->
+        <conversionPattern value="%newline记录时间：%date %n日志级别：%-5level %n错误描述：%message%newline"/>
+      </layout>
+    </appender>
+    <root>
+      <!--文件形式记录日志-->
+      <appender-ref ref="RollingLogFileAppender"/>
+    </root>
+  </log4net>
+</configuration>
