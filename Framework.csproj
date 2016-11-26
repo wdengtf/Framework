@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Cookies\CookieHandle.cs" />
     <Compile Include="Cookies\CookUtils.cs" />
-    <Compile Include="Log\LogService.cs" />
     <Compile Include="Model\JsonResult.cs" />
     <Compile Include="Model\MsgShowConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,9 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="log4net.xml" />
-    <Content Include="Packages\LitJSON.dll" />
-    <Content Include="Packages\log4net.dll" />
-    <Content Include="Packages\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
