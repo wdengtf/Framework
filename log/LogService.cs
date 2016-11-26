@@ -39,6 +39,15 @@ namespace Framework.log
         }
 
         /// <summary>
+        /// 功能：异常日志
+        /// </summary>
+        /// <param name="ex"></param>
+        public static void logDebug(Exception ex)
+        {
+            log.Debug(ex);
+        }
+
+        /// <summary>
         /// 功能：警告日志
         /// </summary>
         /// <param name="info"></param>
